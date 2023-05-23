@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/golang-jwt/jwt/v4"
+	"github.com/golang-jwt/jwt/v5"
 )
 
 var jwtKey = []byte("my_secret_key")
@@ -16,7 +16,7 @@ var users = map[string]string{
 	"user2": "password2",
 }
 
-// Create a struct that models the structure of a user, both in the request body, and in the DB
+// Credentials Create a struct that models the structure of a user, both in the request body, and in the DB
 type Credentials struct {
 	Password string `json:"password"`
 	Username string `json:"username"`
